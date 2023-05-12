@@ -59,6 +59,10 @@ function setup() {
   
   
   //Activity card:
+  fill(255);
+  rect(375, 280, 400, 400, 30);
+  fill(0);
+  //rect(windowWidth / 2, windowHeight / 2, 280, 250, 20);
   textSize(20);
   text("Activity Card", 380, 270);
   
@@ -120,13 +124,11 @@ function setup() {
   buttonemoji2.mouseClicked(buttonEvent_emoji3);
 
   textSize(12);
+
 }
 
 function draw() {
   textFont("Work+Sans");
-  fill(255);
-  rect(375, 280, 400, 400, 30);
-  //rect(windowWidth / 2, windowHeight / 2, 280, 250, 20);
 
   // image(img1, 520, 480, 20, 20);
   // image(img2, 540, 480, 20, 20);
