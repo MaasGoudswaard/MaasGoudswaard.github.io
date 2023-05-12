@@ -14,8 +14,8 @@ function setup() {
   background(220);
 
 
-  // img1 = loadImage("Beaming Face With Smiling Eyes.png");
-  // img2 = loadImage("Confused Face.png");
+  //img1 = loadImage("Beaming Face With Smiling Eyes.png");
+  //img2 = loadImage("Confused Face.png");
   // img3 = loadImage("Frowning Face.png");
   // img4 = loadImage("Grinning Face With Big Eyes.png");
   // img5 = loadImage("Neutral Face.png");
@@ -104,7 +104,7 @@ function setup() {
   inputbox6.option("Organization");
   
   button = createButton("submit");
-  button.position(520, 450);
+  button.position(520, 550);
   // button.position(
   //   windowWidth / 2 + windowWidth / 5,
   //   windowWidth / 2 + windowWidth / 5
@@ -121,11 +121,20 @@ function setup() {
   buttonemoji2.size(20, 20);
   buttonemoji2.mouseClicked(buttonEvent_emoji2);
 
-  buttonemoji2 = createImg("Neutral Face.png");
-  buttonemoji2.position(560, 495);
-  buttonemoji2.size(20, 20);
-  buttonemoji2.mouseClicked(buttonEvent_emoji3);
+  buttonemoji3 = createImg("Neutral Face.png");
+  buttonemoji3.position(560, 495);
+  buttonemoji3.size(20, 20);
+  buttonemoji3.mouseClicked(buttonEvent_emoji3);
 
+  buttonemoji4 = createImg("Slightly Smiling Face.png");
+  buttonemoji4.position(560, 495);
+  buttonemoji4.size(20, 20);
+  buttonemoji4.mouseClicked(buttonEvent_emoji4);
+
+  buttonemoji5 = createImg("Grinning Face With Big Eyes.png");
+  buttonemoji5.position(560, 495);
+  buttonemoji5.size(20, 20);
+  buttonemoji5.mouseClicked(buttonEvent_emoji5);
   textSize(12);
 
 }
