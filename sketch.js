@@ -97,7 +97,7 @@ function setup() {
   inputbox6.option("Organization");
   
   button = createButton("submit");
-  button.position(520, 550);
+  button.position(520, 450);
   // button.position(
   //   windowWidth / 2 + windowWidth / 5,
   //   windowWidth / 2 + windowWidth / 5
@@ -125,7 +125,8 @@ function setup() {
 function draw() {
   textFont("Work+Sans");
   fill(255);
-  rect(windowWidth / 2, windowHeight / 2, 280, 250, 20);
+  rect(375, 280, 400, 400, 30);
+  //rect(windowWidth / 2, windowHeight / 2, 280, 250, 20);
 
   // image(img1, 520, 480, 20, 20);
   // image(img2, 540, 480, 20, 20);
@@ -232,7 +233,7 @@ function buttonEvent() {
     type: "POST",
     contentType: "application/json",
     data: JSON.stringify({
-      Participant: "1",
+      Participant: inputboxteam.value(),
       Title: inputbox.value(),
       Date: inputbox2.value(),
       Hours: inputbox3.value(),
@@ -252,7 +253,7 @@ function buttonEvent() {
       console.log(e); //to show whether sending to database went wrong
     },
   });
-
+  inputboxteam.value("");
   inputbox.value("");
   inputbox2.value("");
   inputbox3.value("");
