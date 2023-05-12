@@ -12,8 +12,7 @@ let smiley1, smiley2, smiley3, smiley4, smiley5;
 function setup() {
   createCanvas(windowWidth - 30, windowHeight - 60); //background
   background(220);
-  textSize(20);
-  text("Activity Card", 380, 270);
+
 
   // img1 = loadImage("Beaming Face With Smiling Eyes.png");
   // img2 = loadImage("Confused Face.png");
@@ -21,24 +20,24 @@ function setup() {
   // img4 = loadImage("Grinning Face With Big Eyes.png");
   // img5 = loadImage("Neutral Face.png");
   // img6 = loadImage("Slightly Smiling Face.png");
-
-  inputbox = createInput();
-  inputbox.size(100, 10);
-  inputbox.position(480, 315);
-
-  inputbox2 = createInput();
-  inputbox2.size(100, 10);
-  inputbox2.position(480, 355);
-
-  inputbox3 = createInput();
-  inputbox3.size(100, 10);
-  inputbox3.position(480, 335);
-
-  inputbox4 = createInput();
-  inputbox4 = select("#textinput");
-  inputbox4.size(200, 50);
-  inputbox4.position(400, 390);
-
+  
+  //Lets first create the team selector:
+  inputboxteam = createSelect();
+  inputboxteam.size(100, 15);
+  inputboxteam.position(100, 100);
+  inputboxteam.option("");
+  inputboxteam.option("Team 1");
+  inputboxteam.option("Team 2");
+  inputboxteam.option("Team 3");
+  inputboxteam.option("Team 4");
+  inputboxteam.option("Team 5");
+  inputboxteam.option("Team 6");
+  inputboxteam.option("Team 7");
+  inputboxteam.option("Team 8");
+  inputboxteam.option("Team 9");
+  inputboxteam.option("Team 10");
+  
+  //The person selector
   person1 = createCheckbox("Name person 1");
   person1.position(100, 125);
 
@@ -57,6 +56,30 @@ function setup() {
   person6 = createCheckbox("External");
   person6.position(100, 250);
 
+  
+  
+  //Activity card:
+  textSize(20);
+  text("Activity Card", 380, 270);
+  
+  inputbox = createInput();
+  inputbox.size(100, 10);
+  inputbox.position(480, 315);
+
+  inputbox2 = createInput();
+  inputbox2.size(100, 10);
+  inputbox2.position(480, 355);
+
+  inputbox3 = createInput();
+  inputbox3.size(100, 10);
+  inputbox3.position(480, 335);
+
+  inputbox4 = createInput();
+  inputbox4 = select("#textinput");
+  inputbox4.size(200, 50);
+  inputbox4.position(400, 390);
+
+
   inputbox6 = createSelect();
   inputbox6.size(100, 15);
   inputbox6.position(520, 475);
@@ -72,12 +95,13 @@ function setup() {
   inputbox6.option("Validating");
   inputbox6.option("Testing");
   inputbox6.option("Organization");
-
+  
   button = createButton("submit");
-  button.position(
-    windowWidth / 2 + windowWidth / 5,
-    windowWidth / 2 + windowWidth / 5
-  );
+  button.position(520, 550);
+  // button.position(
+  //   windowWidth / 2 + windowWidth / 5,
+  //   windowWidth / 2 + windowWidth / 5
+  // );
   button.mouseClicked(buttonEvent);
 
   buttonemoji1 = createImg("Frowning Face.png");
