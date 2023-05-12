@@ -59,13 +59,15 @@ function setup() {
   
   
   //Activity card:
-  fill(255);
-  rect(380, 280, 400, 400, 30);
+  //I dont really understand why it is positioned in this way, it should be on the correct place but it is not
   fill(0);
-  //rect(windowWidth / 2, windowHeight / 2, 280, 250, 20);
-
   textSize(20);
   text("Activity Card", 380, 270);
+
+  fill(255);
+  rect(380, 280, 400, 400, 30);
+  //rect(windowWidth / 2, windowHeight / 2, 280, 250, 20);
+
   
   inputbox = createInput();
   inputbox.size(100, 10);
