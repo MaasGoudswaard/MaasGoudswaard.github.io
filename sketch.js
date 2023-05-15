@@ -96,6 +96,7 @@ function setup() {
   inputbox_type.option("Organization");
   
   //emoji checkbox setup
+<<<<<<< Updated upstream
   emoji1b = createCheckbox("");
   emoji1b.position(400, 510); 
   emoji1 = loadImage("Frowning Face.png");
@@ -107,6 +108,30 @@ function setup() {
   image(emoji1, 425, 480, 20, 20);
 
 
+=======
+  radio_emotion = createRadio();
+  radio_emotion.position(400, 510);
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.style('width', '300px');
+  
+    radio_emotion = createRadio();
+  radio_emotion.position(400, 560);
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.option('');
+  radio_emotion.style('width', '300px');
+>>>>>>> Stashed changes
 
   //Submit button for oocsi events
   button = createButton("submit");
@@ -115,6 +140,7 @@ function setup() {
 }
 
 function draw() {
+<<<<<<< Updated upstream
   //The person selector// they will change dependent on the team selected
   inputbox_team.changed(mySelectEvent);
 
@@ -126,20 +152,9 @@ function draw() {
   //   stroke(51);
   //   rect(520, 480, 20, 20);
   // }
+=======
+>>>>>>> Stashed changes
 
-  // if (showrect2) {
-  //   noFill();
-  //   strokeWeight(1);
-  //   stroke(51);
-  //   rect(540, 480, 20, 20);
-  // }
-
-  // if (showrect3) {
-  //   noFill();
-  //   strokeWeight(1);
-  //   stroke(51);
-  //   rect(560, 480, 20, 20);
-  // }
 
   if (OOCSIsend == true) {
     alertfunction();
@@ -201,6 +216,7 @@ function mySelectEvent() {
   person6 = createCheckbox(p6);
   person6.position(100, 250);
 }
+
 
 function buttonEvent_emoji1() {
   showrect1 = !showrect1;
