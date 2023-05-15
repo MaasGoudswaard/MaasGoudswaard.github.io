@@ -30,22 +30,22 @@ let p6 = "";
 
  function preload(){
    emoji1 = loadImage('Frowning Face.png');
-//   emoji2 = loadImage('Confused Face.png');
-//   emoji3 = loadImage('Neutral Face.png');
-//   emoji4 = loadImage('Slightly Smiling Face.png');
-//   emoji5 = loadImage('Grinning Face With Big Eyes.png');
-//   emoji6 = loadImage('Pouting Face.png');
-//   emoji7 = loadImage('Face Vomiting.png');
-//   emoji8 = loadImage('Hot Face.png');
-//   emoji9 = loadImage('Loudly Crying Face.png');
-//   emoji10 = loadImage('Crying Face.png');
-//   emoji11 = loadImage('Face With Raised Eyebrow.png');
-//   emoji12 = loadImage('Face With Monocle.png');
-//   emoji13 = loadImage('Nerd Face.png');
-//   emoji14 = loadImage('Thinking Face.png');
-//   emoji15 = loadImage('Partying Face.png');
-//   emoji16 = loadImage('Grinning Face With Sweat.png');
-//   emoji17 = loadImage('Smiling Face With Heart Eyes.png');
+  emoji2 = loadImage('Confused Face.png');
+  emoji3 = loadImage('Neutral Face.png');
+  emoji4 = loadImage('Slightly Smiling Face.png');
+  emoji5 = loadImage('Grinning Face With Big Eyes.png');
+  emoji6 = loadImage('Pouting Face.png');
+  emoji7 = loadImage('Face Vomiting.png');
+  emoji8 = loadImage('Hot Face.png');
+  emoji9 = loadImage('Loudly Crying Face.png');
+  emoji10 = loadImage('Crying Face.png');
+  emoji11 = loadImage('Face With Raised Eyebrow.png');
+  emoji12 = loadImage('Face With Monocle.png');
+  emoji13 = loadImage('Nerd Face.png');
+  emoji14 = loadImage('Thinking Face.png');
+  emoji15 = loadImage('Partying Face.png');
+  emoji16 = loadImage('Grinning Face With Sweat.png');
+  emoji17 = loadImage('Smiling Face With Heart Eyes.png');
  }
 
 function setup() {
@@ -136,23 +136,23 @@ function setup() {
   inputbox_type.option("Organization");
   
   //emoji checkbox setup
-//  image(emoji1, 400, 490, 10, 10);
-//  image(emoji2, 415, 490, 10, 10);
-//  image(emoji3, 430, 490, 10, 10);
-//  image(emoji4, 445, 490, 10, 10);
-//  image(emoji5, 460, 490, 10, 10);
-//  image(emoji6, 400, 540, 10, 10);
-//  image(emoji7, 415, 540, 10, 10);
-//  image(emoji8, 430, 540, 10, 10);
-//  image(emoji9, 445, 540, 10, 10);
-//  image(emoji10, 460, 540, 10, 10);
-//  image(emoji11, 475, 540, 10, 10);
-//  image(emoji12, 490, 540, 10, 10);
-//  image(emoji13, 505, 540, 10, 10);
-//  image(emoji14, 520, 540, 10, 10);
-//  image(emoji15, 535, 540, 10, 10);
-//  image(emoji16, 550, 540, 10, 10);
-//  image(emoji17, 565, 540, 10, 10);
+ image(emoji1, 400, 490, 10, 10);
+ image(emoji2, 415, 490, 10, 10);
+ image(emoji3, 430, 490, 10, 10);
+ image(emoji4, 445, 490, 10, 10);
+ image(emoji5, 460, 490, 10, 10);
+ image(emoji6, 400, 540, 10, 10);
+ image(emoji7, 415, 540, 10, 10);
+ image(emoji8, 430, 540, 10, 10);
+ image(emoji9, 445, 540, 10, 10);
+ image(emoji10, 460, 540, 10, 10);
+ image(emoji11, 475, 540, 10, 10);
+ image(emoji12, 490, 540, 10, 10);
+ image(emoji13, 505, 540, 10, 10);
+ image(emoji14, 520, 540, 10, 10);
+ image(emoji15, 535, 540, 10, 10);
+ image(emoji16, 550, 540, 10, 10);
+ image(emoji17, 565, 540, 10, 10);
 
   radio_process = createRadio();
   radio_process.position(400, 510);
