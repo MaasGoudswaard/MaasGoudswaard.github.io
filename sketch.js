@@ -109,25 +109,25 @@ function setup() {
 
   radio_process = createRadio();
   radio_process.position(400, 510);
-  radio_process.option('');
-  radio_process.option('');
-  radio_process.option('');
-  radio_process.option('');
-  radio_process.option('');
+  radio_process.option('1');
+  radio_process.option('2');
+  radio_process.option('3');
+  radio_process.option('4');
+  radio_process.option('5');
   radio_process.style('width', '300px');
   
   radio_result = createRadio();
   radio_result.position(400, 560);
-  radio_result.option('');
-  radio_result.option('');
-  radio_result.option('');
-  radio_result.option('');
-  radio_result.option('');
-  radio_result.option('');
-  radio_result.option('');
-  radio_result.option('');
-  radio_result.option('');
-  radio_result.option('');
+  radio_result.option('1');
+  radio_result.option('2');
+  radio_result.option('3');
+  radio_result.option('4');
+  radio_result.option('5');
+  radio_result.option('6');
+  radio_result.option('7');
+  radio_result.option('8');
+  radio_result.option('9');
+  radio_result.option('10');
   radio_result.style('width', '300px');
 
   //Submit button for oocsi events
@@ -215,18 +215,20 @@ function buttonEvent() {
     contentType: "application/json",
     data: JSON.stringify({
       //define what to send
-      Participant: inputboxteam.value(),
-      Title: inputbox.value(),
-      Date: inputbox2.value(),
-      Hours: inputbox3.value(),
-      Description: inputbox4.value(),
+      Team: inputbox_team.value(),
+      Title: inputbox_title.value(),
+      Date: inputbox_date.value(),
+      Hours: inputbox_hours.value(),
+      Description: inputbox_description.value(),
+      Type: inputbox_type.value(),
       Person1: person1.checked(),
       Person2: person2.checked(),
       Person3: person3.checked(),
       Person4: person4.checked(),
       Person5: person5.checked(),
       Person6: person6.checked(),
-      Type: inputbox6.value(),
+      Emotion_Process: radio_process.value(),
+      Emotion_Result: radio_result.value(),
     }),
     success: function (data) {
       console.log(data); //to show whether sending to database went well
@@ -236,18 +238,20 @@ function buttonEvent() {
     },
   });
   //resetting all boxes to make sure the activity card is ready to log new activity
-  inputboxteam.value("");
-  inputbox.value("");
-  inputbox2.value("");
-  inputbox3.value("");
-  inputbox4.value("");
-  inputbox6.value("");
+  inputbox_team.value("");
+  inputbox_date.value("");
+  inputbox_description.value("");
+  inputbox_hours.value("");
+  inputbox_title.value("");
+  inputbox_type.value("");
   person1.checked(false);
   person2.checked(false);
   person3.checked(false);
   person4.checked(false);
   person5.checked(false);
   person6.checked(false);
+  radio_process.value(""),
+  radio_result.value(""),
   OOCSIsend = true;
 }
 
