@@ -57,7 +57,7 @@ function setup() {
   //I dont really understand why it is positioned in this way, it should be on the correct place but it is not
 
   fill(255);
-  rect(200, 200, 600, 400, 30);
+  rect(200, 200, 800, 400, 30);
 
   fill(0);
   textSize(40);
@@ -177,7 +177,7 @@ function setup() {
   radio_result.option('15');
   radio_result.option('16');
   radio_result.option('17');
-  radio_result.style('width', '300px');
+  radio_result.style('width', '500px');
 
 
   //Submit button for oocsi events
