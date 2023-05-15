@@ -57,7 +57,7 @@ function setup() {
   //I dont really understand why it is positioned in this way, it should be on the correct place but it is not
 
   fill(255);
-  rect(200, 200, 800, 400, 30);
+  rect(200, 200, 700, 420, 30);
 
   fill(0);
   textSize(40);
@@ -187,7 +187,7 @@ const radio_process = createRadio(wrapper1);
 
   //Submit button for oocsi events
   button = createButton("submit");
-  button.position(500, 580);
+  button.position(500, 600);
   button.mouseClicked(buttonEvent);
 }
 
