@@ -154,12 +154,7 @@ function setup() {
  image(emoji16, 690, 520, 25, 25);
  image(emoji17, 719, 520, 25, 25);
 
- const wrapper1 = createDiv();
-wrapper1.id = "radio_process";
-const wrapper2 = createDiv();
-wrapper2.id = "radio_result";
-
-const radio_process = createRadio(wrapper1);
+  radio_process = createRadio();
   radio_process.position(400, 510);
   radio_process.option('1');
   radio_process.option('2');
@@ -168,21 +163,31 @@ const radio_process = createRadio(wrapper1);
   radio_process.option('5');
   radio_process.style('width', '300px');
   
-  const radio_result = createRadio(wrapper2);
-  radio_result.position(400, 560);
-  radio_result.option('a');
-  radio_result.option('b');
-  radio_result.option('c');
-  radio_result.option('d');
-  radio_result.option('e');
-  radio_result.option('f');
-  radio_result.option('g');
-  radio_result.option('h');
-  radio_result.option('i');
-  radio_result.option('j');
-  radio_result.option('k');
-  radio_result.option('l');
-  radio_result.style('width', '500px');
+  inputbox_emoji6 = createCheckbox();
+  inputbox_emoji6.position(400, 560);
+  inputbox_emoji7 = createCheckbox();
+  inputbox_emoji7.position(429, 560);
+  inputbox_emoji8 = createCheckbox();
+  inputbox_emoji8.position(458, 560);
+  inputbox_emoji9 = createCheckbox();
+  inputbox_emoji9.position(487, 560);
+  inputbox_emoji10 = createCheckbox();
+  inputbox_emoji10.position(516, 560);
+  inputbox_emoji11 = createCheckbox();
+  inputbox_emoji11.position(545, 560);
+  inputbox_emoji12 = createCheckbox();
+  inputbox_emoji12.position(574, 560);
+  inputbox_emoji13 = createCheckbox();
+  inputbox_emoji13.position(603, 560);
+  inputbox_emoji14 = createCheckbox();
+  inputbox_emoji14.position(632, 560);
+  inputbox_emoji15 = createCheckbox();
+  inputbox_emoji15.position(661, 560);
+  inputbox_emoji16 = createCheckbox();
+  inputbox_emoji16.position(690, 560);
+  inputbox_emoji17 = createCheckbox();
+  inputbox_emoji17.position(719, 560);
+
 
 
   //Submit button for oocsi events
@@ -245,7 +250,7 @@ function mySelectEvent() {
   person1 = createCheckbox(p1);
   person1.position(250, 325);
   person2 = createCheckbox(p2);
-  person2.position(250, 350);
+  person2.position(250, 350); 
   person3 = createCheckbox(p3);
   person3.position(250, 375);
   person4 = createCheckbox(p4);
@@ -283,7 +288,18 @@ function buttonEvent() {
       Person5: person5.checked(),
       Person6: person6.checked(),
       Emotion_Process: radio_process.value(),
-      Emotion_Result: radio_result.value(),
+      emoji6: inputbox_emoji6.checked(),
+      emoji7: inputbox_emoji7.checked(),
+      emoji8: inputbox_emoji8.checked(),
+      emoji9: inputbox_emoji9.checked(),
+      emoji10: inputbox_emoji10.checked(),
+      emoji11: inputbox_emoji11.checked(),
+      emoji12: inputbox_emoji12.checked(),
+      emoji13: inputbox_emoji13.checked(),
+      emoji14: inputbox_emoji14.checked(),
+      emoji15: inputbox_emoji15.checked(),
+      emoji16: inputbox_emoji16.checked(),
+      emoji17: inputbox_emoji17.checked(),
     }),
     success: function (data) {
       console.log(data); //to show whether sending to database went well
@@ -306,7 +322,18 @@ function buttonEvent() {
   person5.checked(false);
   person6.checked(false);
   radio_process.value(""),
-  radio_result.value(""),
+  inputbox_emoji6.checked(false),
+   inputbox_emoji7.checked(false),
+   inputbox_emoji8.checked(false),
+   inputbox_emoji9.checked(false),
+   inputbox_emoji10.checked(false),
+   inputbox_emoji11.checked(false),
+   inputbox_emoji12.checked(false),
+   inputbox_emoji13.checked(false),
+   inputbox_emoji14.checked(false),
+   inputbox_emoji15.checked(false),
+   inputbox_emoji16.checked(false),
+   inputbox_emoji17.checked(false),
   OOCSIsend = true;
 }
 
