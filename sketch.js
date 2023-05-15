@@ -7,6 +7,9 @@ var showrect1 = false;
 var showrect2 = false;
 var showrect3 = false;
 
+let emoji1;
+
+
 function setup() {
   createCanvas(windowWidth - 30, windowHeight - 60); //background
   background(200);
@@ -16,31 +19,28 @@ function setup() {
   //I dont really understand why it is positioned in this way, it should be on the correct place but it is not
 
   fill(255);
-  rect(250, 200, 600, 600, 30);
+  rect(200, 200, 600, 600, 30);
 
-  textFont("Work+Sans");
   fill(0);
   textSize(40);
-  text("Activity Card", 200, 200);
+  text("Activity Card", 250, 190);
+
+
+
 
 //define standard text and color etc.
-  textSize(12);
+  textSize(14);
+  fill(0);
 
-  //Create labels for following checkboxes
-  text("Activity title", 400, 310);
-  text("Date of action", 400, 330);
-  text("Hours spent", 400, 350);
-  text("Description", 400, 370);
-  text("Who was involved", 400, 450);
-  text("Type of activity", 400, 470);
-  text("Emotion of Process", 400, 490);
-  text("Emotion of Results", 400, 510);
 
+
+
+  text("Team:", 250, 250);
   //Lets first create the team selector: 
   //this will be called later
   inputbox_team = createSelect();
-  inputbox_team.size(100, 15);
-  inputbox_team.position(100, 100);
+  inputbox_team.size(100, 20);
+  inputbox_team.position(250, 275);
   inputbox_team.option("");
   inputbox_team.option("Team 1");
   inputbox_team.option("Team 2");
@@ -52,30 +52,54 @@ function setup() {
   inputbox_team.option("Team 8");
   inputbox_team.option("Team 9");
   inputbox_team.option("Team 10");
+  
+  text("Who was involved:", 250, 300);
+  //The person selector// they will change dependent on the team selected
+  person1 = createCheckbox("Name person 1");
+  person1.position(250, 325);
+  person2 = createCheckbox("Name person 2");
+  person2.position(250, 350);
+  person3 = createCheckbox("Name person 3");
+  person3.position(250, 375);
+  person4 = createCheckbox("Name person 4");
+  person4.position(250, 400);
+  person5 = createCheckbox("Coach");
+  person5.position(250, 425);
+  person6 = createCheckbox("External");
+  person6.position(250, 450);
 
-  fill(0);
+  //Create labels for following checkboxes
+  text("Activity title:", 425, 250);
+  text("Date of action:", 425, 275);
+  text("Hours spent:", 425, 300);
+  text("Description:", 425, 325);
+
+  text("Type of activity:", 425, 450);
+  text("Emotion of Process:", 250, 500);
+  text("Emotion of Results:", 250, 550);
+  
   //inputbox activity title
   inputbox_title = createInput();
   inputbox_title.size(100, 10);
-  inputbox_title.position(480, 315);
+  inputbox_title.position(540, 253);
   //inputbox date
   inputbox_date = createInput();
   inputbox_date.size(100, 10);
-  inputbox_date.position(480, 355);
+  inputbox_date.position(540, 278);
   //inputbox hours spent
   inputbox_hours = createInput();
   inputbox_hours.size(100, 10);
-  inputbox_hours.position(480, 335);
+  inputbox_hours.position(540, 303);
   //inputbox description
   inputbox_description = createInput();
   inputbox_description = select("#textinput");
-  inputbox_description.size(200, 50);
-  inputbox_description.position(400, 390);
+  inputbox_description.size(215, 75);
+  inputbox_description.position(425, 350);
   
   //inputbox type of activity
   inputbox_type = createSelect();
   inputbox_type.size(100, 15);
-  inputbox_type.position(520, 475);
+  inputbox_type.position(540, 453);
   inputbox_type.option("");
   inputbox_type.option("Problem Definition");
   inputbox_type.option("Background Research");
@@ -89,33 +113,17 @@ function setup() {
   inputbox_type.option("Testing");
   inputbox_type.option("Organization");
   
+  //emoji checkbox setup
+  emoji1b = createCheckbox("");
+  emoji1b.position(400, 510); 
+  emoji1 = loadImage("Frowning Face.png");
+  image(emoji1, 390, 480, 20, 20);
 
-  //All emoji buttons this will change
-  buttonemoji1 = createImg("Frowning Face.png");
-  buttonemoji1.position(520, 495);
-  buttonemoji1.size(20, 20);
-  buttonemoji1.mouseClicked(buttonEvent_emoji1);
-
-  buttonemoji2 = createImg("Confused Face.png");
-  buttonemoji2.position(540, 495);
-  buttonemoji2.size(20, 20);
-  buttonemoji2.mouseClicked(buttonEvent_emoji2);
-
-  buttonemoji3 = createImg("Neutral Face.png");
-  buttonemoji3.position(560, 495);
-  buttonemoji3.size(20, 20);
-  buttonemoji3.mouseClicked(buttonEvent_emoji3);
-
-  // buttonemoji4 = createImg("Slightly Smiling Face.png");
-  // buttonemoji4.position(560, 495);
-  // buttonemoji4.size(20, 20);
-  // buttonemoji4.mouseClicked(buttonEvent_emoji4);
-
-  // buttonemoji5 = createImg("Grinning Face With Big Eyes.png");
-  // buttonemoji5.position(560, 495);
-  // buttonemoji5.size(20, 20);
-  // buttonemoji5.mouseClicked(buttonEvent_emoji5);
-
+  emoji1b = createCheckbox("");
+  emoji1b.position(435, 510); 
+  emoji1 = loadImage("Frowning Face.png");
+  image(emoji1, 425, 480, 20, 20);
+  
 
 
   //Submit button for oocsi events
@@ -125,24 +133,6 @@ function setup() {
 }
 
 function draw() {
-  //The person selector// they will change dependent on the team selected
-  person1 = createCheckbox("Name person 1");
-  person1.position(100, 125);
-  person2 = createCheckbox("Name person 2");
-  person2.position(100, 150);
-  person3 = createCheckbox("Name person 3");
-  person3.position(100, 175);
-  person4 = createCheckbox("Name person 4");
-  person4.position(100, 200);
-  person5 = createCheckbox("Coach");
-  person5.position(100, 225);
-  person6 = createCheckbox("External");
-  person6.position(100, 250);
-
-
-
-
-
   // //emoji outline selectors
   // // hier komt code
   // if (showrect1) {
