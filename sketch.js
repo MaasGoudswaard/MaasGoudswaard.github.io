@@ -137,22 +137,22 @@ function setup() {
   
   //emoji checkbox setup
  image(emoji1, 400, 470, 25, 25);
- image(emoji2, 428, 470, 25, 25);
- image(emoji3, 456, 470, 25, 25);
- image(emoji4, 484, 470, 25, 25);
- image(emoji5, 512, 470, 25, 25);
- image(emoji6, 400, 540, 25, 25);
- image(emoji7, 428, 540, 25, 25);
- image(emoji8, 456, 540, 25, 25);
- image(emoji9, 484, 540, 25, 25);
- image(emoji10, 512, 540, 25, 25);
- image(emoji11, 540, 540, 25, 25);
- image(emoji12, 568, 540, 25, 25);
- image(emoji13, 596, 540, 25, 25);
- image(emoji14, 624, 540, 25, 25);
- image(emoji15, 652, 540, 25, 25);
- image(emoji16, 680, 540, 25, 25);
- image(emoji17, 708, 540, 25, 25);
+ image(emoji2, 429, 470, 25, 25);
+ image(emoji3, 458, 470, 25, 25);
+ image(emoji4, 487, 470, 25, 25);
+ image(emoji5, 516, 470, 25, 25);
+ image(emoji6, 400, 520, 25, 25);
+ image(emoji7, 429, 520, 25, 25);
+ image(emoji8, 458, 520, 25, 25);
+ image(emoji9, 487, 520, 25, 25);
+ image(emoji10, 516, 520, 25, 25);
+ image(emoji11, 545, 520, 25, 25);
+ image(emoji12, 574, 520, 25, 25);
+ image(emoji13, 603, 520, 25, 25);
+ image(emoji14, 632, 520, 25, 25);
+ image(emoji15, 661, 520, 25, 25);
+ image(emoji16, 690, 520, 25, 25);
+ image(emoji17, 719, 520, 25, 25);
 
  const wrapper1 = createDiv();
 wrapper1.id = "radio_process";
@@ -170,18 +170,18 @@ const radio_process = createRadio(wrapper1);
   
   const radio_result = createRadio(wrapper2);
   radio_result.position(400, 560);
-  radio_result.option('6');
-  radio_result.option('7');
-  radio_result.option('8');
-  radio_result.option('9');
-  radio_result.option('10');
-  radio_result.option('11');
-  radio_result.option('12');
-  radio_result.option('13');
-  radio_result.option('14');
-  radio_result.option('15');
-  radio_result.option('16');
-  radio_result.option('17');
+  radio_result.option('a');
+  radio_result.option('b');
+  radio_result.option('c');
+  radio_result.option('d');
+  radio_result.option('e');
+  radio_result.option('f');
+  radio_result.option('g');
+  radio_result.option('h');
+  radio_result.option('i');
+  radio_result.option('j');
+  radio_result.option('k');
+  radio_result.option('l');
   radio_result.style('width', '500px');
 
 
