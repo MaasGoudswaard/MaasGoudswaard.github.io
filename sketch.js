@@ -8,7 +8,7 @@ var showrect2 = false;
 var showrect3 = false;
 
 let emoji1;
-
+let p1, p2, p3, p4;
 
 function setup() {
   createCanvas(windowWidth - 30, windowHeight - 60); //background
@@ -32,15 +32,21 @@ function setup() {
   textSize(14);
   fill(0);
 
+  //Create labels for following checkboxes
+  text("Activity title", 400, 310);
+  text("Date of action", 400, 330);
+  text("Hours spent", 400, 350);
+  text("Description", 400, 370);
+  text("Who was involved", 400, 450);
+  text("Type of activity", 400, 470);
+  text("Emotion of Process", 400, 490);
+  text("Emotion of Results", 400, 510);
 
-
-
-  text("Team:", 250, 250);
   //Lets first create the team selector: 
   //this will be called later
   inputbox_team = createSelect();
-  inputbox_team.size(100, 20);
-  inputbox_team.position(250, 275);
+  inputbox_team.size(100, 15);
+  inputbox_team.position(100, 100);
   inputbox_team.option("");
   inputbox_team.option("Team 1");
   inputbox_team.option("Team 2");
@@ -52,32 +58,8 @@ function setup() {
   inputbox_team.option("Team 8");
   inputbox_team.option("Team 9");
   inputbox_team.option("Team 10");
-  
-  text("Who was involved:", 250, 300);
-  //The person selector// they will change dependent on the team selected
-  person1 = createCheckbox("Name person 1");
-  person1.position(250, 325);
-  person2 = createCheckbox("Name person 2");
-  person2.position(250, 350);
-  person3 = createCheckbox("Name person 3");
-  person3.position(250, 375);
-  person4 = createCheckbox("Name person 4");
-  person4.position(250, 400);
-  person5 = createCheckbox("Coach");
-  person5.position(250, 425);
-  person6 = createCheckbox("External");
-  person6.position(250, 450);
 
-  //Create labels for following checkboxes
-  text("Activity title:", 425, 250);
-  text("Date of action:", 425, 275);
-  text("Hours spent:", 425, 300);
-  text("Description:", 425, 325);
-
-  text("Type of activity:", 425, 450);
-  text("Emotion of Process:", 250, 500);
-  text("Emotion of Results:", 250, 550);
-  
+  fill(0);
   //inputbox activity title
   inputbox_title = createInput();
   inputbox_title.size(100, 10);
@@ -123,7 +105,7 @@ function setup() {
   emoji1b.position(435, 510); 
   emoji1 = loadImage("Frowning Face.png");
   image(emoji1, 425, 480, 20, 20);
-  
+
 
 
   //Submit button for oocsi events
@@ -133,6 +115,9 @@ function setup() {
 }
 
 function draw() {
+  //The person selector// they will change dependent on the team selected
+  inputbox_team.changed(mySelectEvent);
+
   // //emoji outline selectors
   // // hier komt code
   // if (showrect1) {
@@ -160,6 +145,61 @@ function draw() {
     alertfunction();
     OOCSIsend = false;
   }
+}
+//
+function mySelectEvent() {
+  if (inputbox_team.value() == "Team 1") {
+    p1 = "Kees";
+    p2 = "Lisa";
+    p3 = "Charlotte";
+    p4 = "Jaap";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  if (inputbox_team.value() == "Team 2") {
+    p1 = "Maas";
+    p2 = "Jelmer";
+    p3 = "Leqi";
+    p4 = "Nikki";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  if (inputbox_team.value() == "Team 3") {
+    p1 = "Joep";
+    p2 = "Bart";
+    p3 = "Miguel";
+    p4 = "Stephan";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  if (inputbox_team.value() == "Team 4") {
+    p1 = "x";
+    p2 = "y";
+    p3 = "z";
+    p4 = "f";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  if (inputbox_team.value() == "Team 5") {
+    p1 = "Single";
+    p2 = "";
+    p3 = "";
+    p4 = "";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  person1 = createCheckbox(p1);
+  person1.position(100, 125);
+  person2 = createCheckbox(p2);
+  person2.position(100, 150);
+  person3 = createCheckbox(p3);
+  person3.position(100, 175);
+  person4 = createCheckbox(p4);
+  person4.position(100, 200);
+  person5 = createCheckbox(p5);
+  person5.position(100, 225);
+  person6 = createCheckbox(p6);
+  person6.position(100, 250);
 }
 
 function buttonEvent_emoji1() {
