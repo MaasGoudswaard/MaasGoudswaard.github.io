@@ -154,7 +154,12 @@ function setup() {
  image(emoji16, 680, 540, 25, 25);
  image(emoji17, 708, 540, 25, 25);
 
-  radio_process = createRadio();
+ const wrapper1 = createDiv();
+wrapper1.id = "radio_process";
+const wrapper2 = createDiv();
+wrapper2.id = "radio_result";
+
+const radio_process = createRadio(wrapper1);
   radio_process.position(400, 510);
   radio_process.option('1');
   radio_process.option('2');
@@ -163,7 +168,7 @@ function setup() {
   radio_process.option('5');
   radio_process.style('width', '300px');
   
-  radio_result = createRadio();
+  const radio_result = createRadio(wrapper2);
   radio_result.position(400, 560);
   radio_result.option('6');
   radio_result.option('7');
