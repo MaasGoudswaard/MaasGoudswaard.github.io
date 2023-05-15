@@ -27,27 +27,27 @@ let p3 = "";
 let p4 = "";
 let p5 = "";
 let p6 = "";
-function preload(){
-  emoji1 = loadImage('Frowning Face.png');
-  emoji2 = loadImage('Confused Face.png');
-  emoji3 = loadImage('Neutral Face.png');
-  emoji4 = loadImage('Slightly Smiling Face.png');
-  emoji5 = loadImage('Grinning Face With Big Eyes.png');
-  emoji6 = loadImage('Pouting Face.png');
-  emoji7 = loadImage('Face Vomiting.png');
-  emoji8 = loadImage('Hot Face.png');
-  emoji9 = loadImage('Loudly Crying Face.png');
-  emoji10 = loadImage('Crying Face.png');
-  emoji11 = loadImage('Face With Raised Eyebrow.png');
-  emoji12 = loadImage('Face With Monocle.png');
-  emoji13 = loadImage('Nerd Face.png');
-  emoji14 = loadImage('Thinking Face.png');
-  emoji15 = loadImage('Partying Face.png');
-  emoji16 = loadImage('Grinning Face With Sweat.png');
-  emoji17 = loadImage('Smiling Face With Heart Eyes.png');
 
+ function preload(){
+   emoji1 = loadImage('Frowning Face.png');
+//   emoji2 = loadImage('Confused Face.png');
+//   emoji3 = loadImage('Neutral Face.png');
+//   emoji4 = loadImage('Slightly Smiling Face.png');
+//   emoji5 = loadImage('Grinning Face With Big Eyes.png');
+//   emoji6 = loadImage('Pouting Face.png');
+//   emoji7 = loadImage('Face Vomiting.png');
+//   emoji8 = loadImage('Hot Face.png');
+//   emoji9 = loadImage('Loudly Crying Face.png');
+//   emoji10 = loadImage('Crying Face.png');
+//   emoji11 = loadImage('Face With Raised Eyebrow.png');
+//   emoji12 = loadImage('Face With Monocle.png');
+//   emoji13 = loadImage('Nerd Face.png');
+//   emoji14 = loadImage('Thinking Face.png');
+//   emoji15 = loadImage('Partying Face.png');
+//   emoji16 = loadImage('Grinning Face With Sweat.png');
+//   emoji17 = loadImage('Smiling Face With Heart Eyes.png');
+ }
 
-}
 function setup() {
   createCanvas(windowWidth - 30, windowHeight - 60); //background
   background(200);
@@ -138,9 +138,9 @@ function setup() {
   inputbox_type.option("Organization");
   
   //emoji checkbox setup
- //image(emoji1, 400, 490, 10,10);
+ image(emoji1, 400, 490);
   
-  noFill();
+
   radio_process = createRadio();
   radio_process.position(400, 510);
   radio_process.option('1');
@@ -166,7 +166,7 @@ function setup() {
   radio_result.option('17');
   radio_result.style('width', '300px');
 
-  Fill(0);
+
   //Submit button for oocsi events
   button = createButton("submit");
   button.position(520, 550);
