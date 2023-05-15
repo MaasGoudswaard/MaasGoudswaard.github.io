@@ -8,7 +8,13 @@ var showrect2 = false;
 var showrect3 = false;
 
 let emoji1;
-let p1, p2, p3, p4;
+
+let p1 = "";
+let p2 = "";
+let p3 = "";
+let p4 = "";
+let p5 = "";
+let p6 = "";
 
 function setup() {
   createCanvas(windowWidth - 30, windowHeight - 60); //background
@@ -32,21 +38,13 @@ function setup() {
   textSize(14);
   fill(0);
 
-  //Create labels for following checkboxes
-  text("Activity title", 400, 310);
-  text("Date of action", 400, 330);
-  text("Hours spent", 400, 350);
-  text("Description", 400, 370);
-  text("Who was involved", 400, 450);
-  text("Type of activity", 400, 470);
-  text("Emotion of Process", 400, 490);
-  text("Emotion of Results", 400, 510);
 
+  text("Team:", 250, 250);
   //Lets first create the team selector: 
   //this will be called later
   inputbox_team = createSelect();
-  inputbox_team.size(100, 15);
-  inputbox_team.position(100, 100);
+  inputbox_team.size(100, 20);
+  inputbox_team.position(250, 275);
   inputbox_team.option("");
   inputbox_team.option("Team 1");
   inputbox_team.option("Team 2");
@@ -58,8 +56,20 @@ function setup() {
   inputbox_team.option("Team 8");
   inputbox_team.option("Team 9");
   inputbox_team.option("Team 10");
+  
+  text("Who was involved:", 250, 300);
+  //The person selector// they will change dependent on the team selected
+ 
+  //Create labels for following checkboxes
+  text("Activity title:", 425, 250);
+  text("Date of action:", 425, 275);
+  text("Hours spent:", 425, 300);
+  text("Description:", 425, 325);
 
-  fill(0);
+  text("Type of activity:", 425, 450);
+  text("Emotion of Process:", 250, 500);
+  text("Emotion of Results:", 250, 550);
+  
   //inputbox activity title
   inputbox_title = createInput();
   inputbox_title.size(100, 10);
@@ -176,61 +186,22 @@ function mySelectEvent() {
     p5 = "Coach";
     p6 = "External";
   }
+
   person1 = createCheckbox(p1);
-  person1.position(100, 125);
+  person1.position(250, 325);
   person2 = createCheckbox(p2);
-  person2.position(100, 150);
+  person2.position(250, 350);
   person3 = createCheckbox(p3);
-  person3.position(100, 175);
+  person3.position(250, 375);
   person4 = createCheckbox(p4);
-  person4.position(100, 200);
+  person4.position(250, 400);
   person5 = createCheckbox(p5);
-  person5.position(100, 225);
+  person5.position(250, 425);
   person6 = createCheckbox(p6);
-  person6.position(100, 250);
-}
-
-
-function buttonEvent_emoji1() {
-  showrect1 = !showrect1;
-  showrect2 = false;
-  showrect3 = false;
-}
-
-function buttonEvent_emoji2() {
-  showrect2 = !showrect2;
-  showrect1 = false;
-  showrect3 = false;
-}
-
-function buttonEvent_emoji3() {
-  showrect3 = !showrect3;
-  showrect2 = false;
-  showrect1 = false;
+  person6.position(250, 450);
 }
 
 function buttonEvent() {
-
-  // print("Title: " + inputbox.value());
-  // print("Hours: " + inputbox2.value());
-  // print("Description: " + inputbox3.value());
-  // print(
-  //   "Persons involved: " +
-  //     person1.checked() +
-  //     ", " +
-  //     person2.checked() +
-  //     ", " +
-  //     person3.checked() +
-  //     ", " +
-  //     person4.checked() +
-  //     ", " +
-  //     person5.checked() +
-  //     ", " +
-  //     person6.checked()
-  // );
-
-
-
 
   $.ajax({
     //to send data to the database
