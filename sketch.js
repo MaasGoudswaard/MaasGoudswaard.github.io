@@ -9,23 +9,22 @@ var showrect3 = false;
 
 function setup() {
   createCanvas(windowWidth - 30, windowHeight - 60); //background
-  background(220);
+  background(200);
   
   //First draw the card box
   //Activity card:
   //I dont really understand why it is positioned in this way, it should be on the correct place but it is not
-  fill(0);
-  textSize(20);
-  text("Activity Card", 200, 200);
 
   fill(255);
   rect(250, 200, 600, 600, 30);
 
+  textFont("Work+Sans");
+  fill(0);
+  textSize(40);
+  text("Activity Card", 200, 200);
+
 //define standard text and color etc.
   textSize(12);
-  fill(0);
-  textFont("Work+Sans");
-
 
   //Create labels for following checkboxes
   text("Activity title", 400, 310);
@@ -121,15 +120,15 @@ function setup() {
   buttonemoji3.size(20, 20);
   buttonemoji3.mouseClicked(buttonEvent_emoji3);
 
-  buttonemoji4 = createImg("Slightly Smiling Face.png");
-  buttonemoji4.position(560, 495);
-  buttonemoji4.size(20, 20);
-  buttonemoji4.mouseClicked(buttonEvent_emoji4);
+  // buttonemoji4 = createImg("Slightly Smiling Face.png");
+  // buttonemoji4.position(560, 495);
+  // buttonemoji4.size(20, 20);
+  // buttonemoji4.mouseClicked(buttonEvent_emoji4);
 
-  buttonemoji5 = createImg("Grinning Face With Big Eyes.png");
-  buttonemoji5.position(560, 495);
-  buttonemoji5.size(20, 20);
-  buttonemoji5.mouseClicked(buttonEvent_emoji5);
+  // buttonemoji5 = createImg("Grinning Face With Big Eyes.png");
+  // buttonemoji5.position(560, 495);
+  // buttonemoji5.size(20, 20);
+  // buttonemoji5.mouseClicked(buttonEvent_emoji5);
 
 
 
