@@ -136,20 +136,20 @@ function setup() {
   inputbox_type.option("Organization");
   
   //emoji checkbox setup
- image(emoji1, 400, 490, 10, 10);
- image(emoji2, 415, 490, 10, 10);
- image(emoji3, 430, 490, 10, 10);
- image(emoji4, 445, 490, 10, 10);
- image(emoji5, 460, 490, 10, 10);
- image(emoji6, 400, 540, 10, 10);
- image(emoji7, 415, 540, 10, 10);
- image(emoji8, 430, 540, 10, 10);
- image(emoji9, 445, 540, 10, 10);
- image(emoji10, 460, 540, 10, 10);
- image(emoji11, 475, 540, 10, 10);
- image(emoji12, 490, 540, 10, 10);
- image(emoji13, 505, 540, 10, 10);
- image(emoji14, 520, 540, 10, 10);
+ image(emoji1, 400, 490, 20, 20);
+ image(emoji2, 425, 490, 20, 20);
+ image(emoji3, 450, 490, 20, 20);
+ image(emoji4, 475, 490, 20, 20);
+ image(emoji5, 500, 490, 20, 20);
+ image(emoji6, 400, 540, 20, 20);
+ image(emoji7, 415, 540, 20, 10);
+ image(emoji8, 430, 540, 20, 10);
+ image(emoji9, 445, 540, 20, 10);
+ image(emoji10, 460, 540, 20, 10);
+ image(emoji11, 475, 540, 20, 10);
+ image(emoji12, 490, 540, 20, 10);
+ image(emoji13, 505, 540, 20, 10);
+ image(emoji14, 520, 540, 20, 10);
  image(emoji15, 535, 540, 10, 10);
  image(emoji16, 550, 540, 10, 10);
  image(emoji17, 565, 540, 10, 10);
