@@ -3,11 +3,23 @@ var button;
 
 var OOCSIsend = false;
 
-var showrect1 = false;
-var showrect2 = false;
-var showrect3 = false;
-
 let emoji1;
+let emoji2;
+let emoji3;
+let emoji4;
+let emoji5;
+let emoji6;
+let emoji7;
+let emoji8;
+let emoji9;
+let emoji10;
+let emoji11;
+let emoji12;
+let emoji13;
+let emoji14;
+let emoji15;
+let emoji16;
+let emoji17;
 
 let p1 = "";
 let p2 = "";
@@ -15,7 +27,27 @@ let p3 = "";
 let p4 = "";
 let p5 = "";
 let p6 = "";
+function preload(){
+  emoji1 = LoadImage('Frowning Face.png');
+  emoji2 = LoadImage('Confused Face.png');
+  emoji3 = LoadImage('Neutral Face.png');
+  emoji4 = LoadImage('Slightly Smiling Face.png');
+  emoji5 = LoadImage('Grinning Face With Big Eyes.png');
+  emoji6 = LoadImage('Pouting Face.png');
+  emoji7 = LoadImage('Face Vomiting.png');
+  emoji8 = LoadImage('Hot Face.png');
+  emoji9 = LoadImage('Loudly Crying Face.png');
+  emoji10 = LoadImage('Crying Face.png');
+  emoji11 = LoadImage('Face With Raised Eyebrow.png');
+  emoji12 = LoadImage('Face With Monocle.png');
+  emoji13 = LoadImage('Nerd Face.png');
+  emoji14 = LoadImage('Thinking Face.png');
+  emoji15 = LoadImage('Partying Face.png');
+  emoji16 = LoadImage('Grinning Face With Sweat.png');
+  emoji17 = LoadImage('Smiling Face With Heart Eyes.png');
 
+
+}
 function setup() {
   createCanvas(windowWidth - 30, windowHeight - 60); //background
   background(200);
@@ -106,7 +138,10 @@ function setup() {
   inputbox_type.option("Organization");
   
   //emoji checkbox setup
-
+ image(emoji1, 400, 490, 10,10);
+  
+  noFill();
+  
   radio_process = createRadio();
   radio_process.position(400, 510);
   radio_process.option('1');
@@ -118,18 +153,21 @@ function setup() {
   
   radio_result = createRadio();
   radio_result.position(400, 560);
-  radio_result.option('1');
-  radio_result.option('2');
-  radio_result.option('3');
-  radio_result.option('4');
-  radio_result.option('5');
   radio_result.option('6');
   radio_result.option('7');
   radio_result.option('8');
   radio_result.option('9');
   radio_result.option('10');
+  radio_result.option('11');
+  radio_result.option('12');
+  radio_result.option('13');
+  radio_result.option('14');
+  radio_result.option('15');
+  radio_result.option('16');
+  radio_result.option('17');
   radio_result.style('width', '300px');
 
+  Fill(0);
   //Submit button for oocsi events
   button = createButton("submit");
   button.position(520, 550);
