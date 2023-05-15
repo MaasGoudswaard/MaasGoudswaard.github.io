@@ -1,117 +1,111 @@
 
 var button;
-let inputbox5;
+
 var OOCSIsend = false;
+
 var showrect1 = false;
 var showrect2 = false;
 var showrect3 = false;
-var buttonpress = false;
-
-let img1, img2, img3, img4, img5, img6;
-let smiley1, smiley2, smiley3, smiley4, smiley5;
 
 function setup() {
   createCanvas(windowWidth - 30, windowHeight - 60); //background
   background(220);
-
-
-  //img1 = loadImage("Beaming Face With Smiling Eyes.png");
-  //img2 = loadImage("Confused Face.png");
-  // img3 = loadImage("Frowning Face.png");
-  // img4 = loadImage("Grinning Face With Big Eyes.png");
-  // img5 = loadImage("Neutral Face.png");
-  // img6 = loadImage("Slightly Smiling Face.png");
   
-  //Lets first create the team selector:
-  inputboxteam = createSelect();
-  inputboxteam.size(100, 15);
-  inputboxteam.position(100, 100);
-  inputboxteam.option("");
-  inputboxteam.option("Team 1");
-  inputboxteam.option("Team 2");
-  inputboxteam.option("Team 3");
-  inputboxteam.option("Team 4");
-  inputboxteam.option("Team 5");
-  inputboxteam.option("Team 6");
-  inputboxteam.option("Team 7");
-  inputboxteam.option("Team 8");
-  inputboxteam.option("Team 9");
-  inputboxteam.option("Team 10");
-  
-  //The person selector
-  person1 = createCheckbox("Name person 1");
-  person1.position(100, 125);
-
-  person2 = createCheckbox("Name person 2");
-  person2.position(100, 150);
-
-  person3 = createCheckbox("Name person 3");
-  person3.position(100, 175);
-
-  person4 = createCheckbox("Name person 4");
-  person4.position(100, 200);
-
-  person5 = createCheckbox("Coach");
-  person5.position(100, 225);
-
-  person6 = createCheckbox("External");
-  person6.position(100, 250);
-
-  
-  
+  //First draw the card box
   //Activity card:
   //I dont really understand why it is positioned in this way, it should be on the correct place but it is not
   fill(0);
   textSize(20);
-  text("Activity Card", 380, 270);
+  text("Activity Card", 200, 200);
 
   fill(255);
-  rect(380, 280, 400, 400, 30);
-  //rect(windowWidth / 2, windowHeight / 2, 280, 250, 20);
+  rect(250, 200, 600, 600, 30);
 
+//define standard text and color etc.
+  textSize(12);
+  fill(0);
+  textFont("Work+Sans");
+
+
+  //Create labels for following checkboxes
+  text("Activity title", 400, 310);
+  text("Date of action", 400, 330);
+  text("Hours spent", 400, 350);
+  text("Description", 400, 370);
+  text("Who was involved", 400, 450);
+  text("Type of activity", 400, 470);
+  text("Emotion of Process", 400, 490);
+  text("Emotion of Results", 400, 510);
+
+  //Lets first create the team selector: 
+  //this will be called later
+  inputbox_team = createSelect();
+  inputbox_team.size(100, 15);
+  inputbox_team.position(100, 100);
+  inputbox_team.option("");
+  inputbox_team.option("Team 1");
+  inputbox_team.option("Team 2");
+  inputbox_team.option("Team 3");
+  inputbox_team.option("Team 4");
+  inputbox_team.option("Team 5");
+  inputbox_team.option("Team 6");
+  inputbox_team.option("Team 7");
+  inputbox_team.option("Team 8");
+  inputbox_team.option("Team 9");
+  inputbox_team.option("Team 10");
   
-  inputbox = createInput();
-  inputbox.size(100, 10);
-  inputbox.position(480, 315);
+  //The person selector// they will change dependent on the team selected
+  person1 = createCheckbox("Name person 1");
+  person1.position(100, 125);
+  person2 = createCheckbox("Name person 2");
+  person2.position(100, 150);
+  person3 = createCheckbox("Name person 3");
+  person3.position(100, 175);
+  person4 = createCheckbox("Name person 4");
+  person4.position(100, 200);
+  person5 = createCheckbox("Coach");
+  person5.position(100, 225);
+  person6 = createCheckbox("External");
+  person6.position(100, 250);
 
-  inputbox2 = createInput();
-  inputbox2.size(100, 10);
-  inputbox2.position(480, 355);
-
-  inputbox3 = createInput();
-  inputbox3.size(100, 10);
-  inputbox3.position(480, 335);
-
-  inputbox4 = createInput();
-  inputbox4 = select("#textinput");
-  inputbox4.size(200, 50);
-  inputbox4.position(400, 390);
-
-
-  inputbox6 = createSelect();
-  inputbox6.size(100, 15);
-  inputbox6.position(520, 475);
-  inputbox6.option("");
-  inputbox6.option("Problem Definition");
-  inputbox6.option("Background Research");
-  inputbox6.option("Concept Definition");
-  inputbox6.option("Concept Development");
-  inputbox6.option("Brainstorm / Ideate");
-  inputbox6.option("Analyzing");
-  inputbox6.option("Evaluating");
-  inputbox6.option("Prototype Building");
-  inputbox6.option("Validating");
-  inputbox6.option("Testing");
-  inputbox6.option("Organization");
+  fill(0);
+  //inputbox activity title
+  inputbox_title = createInput();
+  inputbox_title.size(100, 10);
+  inputbox_title.position(480, 315);
+  //inputbox date
+  inputbox_date = createInput();
+  inputbox_date.size(100, 10);
+  inputbox_date.position(480, 355);
+  //inputbox hours spent
+  inputbox_hours = createInput();
+  inputbox_hours.size(100, 10);
+  inputbox_hours.position(480, 335);
+  //inputbox description
+  inputbox_description = createInput();
+  inputbox_description = select("#textinput");
+  inputbox_description.size(200, 50);
+  inputbox_description.position(400, 390);
   
-  button = createButton("submit");
-  button.position(520, 550);
-  // button.position(
-  //   windowWidth / 2 + windowWidth / 5,
-  //   windowWidth / 2 + windowWidth / 5
-  // );
-  button.mouseClicked(buttonEvent);
+  //inputbox type of activity
+  inputbox_type = createSelect();
+  inputbox_type.size(100, 15);
+  inputbox_type.position(520, 475);
+  inputbox_type.option("");
+  inputbox_type.option("Problem Definition");
+  inputbox_type.option("Background Research");
+  inputbox_type.option("Concept Definition");
+  inputbox_type.option("Concept Development");
+  inputbox_type.option("Brainstorm / Ideate");
+  inputbox_type.option("Analyzing");
+  inputbox_type.option("Evaluating");
+  inputbox_type.option("Prototype Building");
+  inputbox_type.option("Validating");
+  inputbox_type.option("Testing");
+  inputbox_type.option("Organization");
+  
 
+  //All emoji buttons this will change
   buttonemoji1 = createImg("Frowning Face.png");
   buttonemoji1.position(520, 495);
   buttonemoji1.size(20, 20);
@@ -136,51 +130,38 @@ function setup() {
   buttonemoji5.position(560, 495);
   buttonemoji5.size(20, 20);
   buttonemoji5.mouseClicked(buttonEvent_emoji5);
-  textSize(12);
 
+
+
+  //Submit button for oocsi events
+  button = createButton("submit");
+  button.position(520, 550);
+  button.mouseClicked(buttonEvent);
 }
 
 function draw() {
-  textFont("Work+Sans");
+  // //emoji outline selectors
+  // // hier komt code
+  // if (showrect1) {
+  //   noFill();
+  //   strokeWeight(1);
+  //   stroke(51);
+  //   rect(520, 480, 20, 20);
+  // }
 
-  // image(img1, 520, 480, 20, 20);
-  // image(img2, 540, 480, 20, 20);
-  // image(img3, 560, 480, 20, 20);
-  // image(img4, 580, 480, 20, 20);
-  // image(img5, 600, 480, 20, 20);
-  // image(img6, 620, 480, 20, 20);
+  // if (showrect2) {
+  //   noFill();
+  //   strokeWeight(1);
+  //   stroke(51);
+  //   rect(540, 480, 20, 20);
+  // }
 
-  if (showrect1) {
-    noFill();
-    strokeWeight(1);
-    stroke(51);
-    rect(520, 480, 20, 20);
-  }
-
-  if (showrect2) {
-    noFill();
-    strokeWeight(1);
-    stroke(51);
-    rect(540, 480, 20, 20);
-  }
-
-  if (showrect3) {
-    noFill();
-    strokeWeight(1);
-    stroke(51);
-    rect(560, 480, 20, 20);
-  }
-
-  noStroke();
-  fill(0);
-  text("Activity title", 400, 310);
-  text("Date of action", 400, 330);
-  text("Hours spent", 400, 350);
-  text("Description", 400, 370);
-  text("Who was involved", 400, 450);
-  text("Type of activity", 400, 470);
-  text("Emotion of Process", 400, 490);
-  text("Emotion of Results", 400, 510);
+  // if (showrect3) {
+  //   noFill();
+  //   strokeWeight(1);
+  //   stroke(51);
+  //   rect(560, 480, 20, 20);
+  // }
 
   if (OOCSIsend == true) {
     alertfunction();
@@ -207,35 +188,27 @@ function buttonEvent_emoji3() {
 }
 
 function buttonEvent() {
-  let checkperson1 = person1.checked();
-  let checkperson2 = person2.checked();
-  let checkperson3 = person3.checked();
-  let checkperson4 = person4.checked();
-  let checkperson5 = person5.checked();
-  let checkperson6 = person6.checked();
 
-  print("Title: " + inputbox.value());
-  print("Hours: " + inputbox2.value());
-  print("Description: " + inputbox3.value());
-  print(
-    "Persons involved: " +
-      checkperson1 +
-      ", " +
-      checkperson2 +
-      ", " +
-      checkperson3 +
-      ", " +
-      checkperson4 +
-      ", " +
-      checkperson5 +
-      ", " +
-      checkperson6
-  );
+  // print("Title: " + inputbox.value());
+  // print("Hours: " + inputbox2.value());
+  // print("Description: " + inputbox3.value());
+  // print(
+  //   "Persons involved: " +
+  //     person1.checked() +
+  //     ", " +
+  //     person2.checked() +
+  //     ", " +
+  //     person3.checked() +
+  //     ", " +
+  //     person4.checked() +
+  //     ", " +
+  //     person5.checked() +
+  //     ", " +
+  //     person6.checked()
+  // );
 
-  // var data = {
-  //   Title: inputbox.value(),
-  //   Title: inputbox.value(),
-  // };
+
+
 
   $.ajax({
     //to send data to the database
@@ -248,6 +221,7 @@ function buttonEvent() {
     type: "POST",
     contentType: "application/json",
     data: JSON.stringify({
+      //define what to send
       Participant: inputboxteam.value(),
       Title: inputbox.value(),
       Date: inputbox2.value(),
@@ -268,6 +242,7 @@ function buttonEvent() {
       console.log(e); //to show whether sending to database went wrong
     },
   });
+  //resetting all boxes to make sure the activity card is ready to log new activity
   inputboxteam.value("");
   inputbox.value("");
   inputbox2.value("");
@@ -283,6 +258,7 @@ function buttonEvent() {
   OOCSIsend = true;
 }
 
+//Nice little prompt to show that it worked
 function alertfunction() {
   alert("Activity Card logged!");
 }
