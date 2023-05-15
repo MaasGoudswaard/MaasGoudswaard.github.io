@@ -52,20 +52,6 @@ function setup() {
   inputbox_team.option("Team 8");
   inputbox_team.option("Team 9");
   inputbox_team.option("Team 10");
-  
-  //The person selector// they will change dependent on the team selected
-  person1 = createCheckbox("Name person 1");
-  person1.position(100, 125);
-  person2 = createCheckbox("Name person 2");
-  person2.position(100, 150);
-  person3 = createCheckbox("Name person 3");
-  person3.position(100, 175);
-  person4 = createCheckbox("Name person 4");
-  person4.position(100, 200);
-  person5 = createCheckbox("Coach");
-  person5.position(100, 225);
-  person6 = createCheckbox("External");
-  person6.position(100, 250);
 
   fill(0);
   //inputbox activity title
@@ -139,6 +125,24 @@ function setup() {
 }
 
 function draw() {
+  //The person selector// they will change dependent on the team selected
+  person1 = createCheckbox("Name person 1");
+  person1.position(100, 125);
+  person2 = createCheckbox("Name person 2");
+  person2.position(100, 150);
+  person3 = createCheckbox("Name person 3");
+  person3.position(100, 175);
+  person4 = createCheckbox("Name person 4");
+  person4.position(100, 200);
+  person5 = createCheckbox("Coach");
+  person5.position(100, 225);
+  person6 = createCheckbox("External");
+  person6.position(100, 250);
+
+
+
+
+
   // //emoji outline selectors
   // // hier komt code
   // if (showrect1) {
