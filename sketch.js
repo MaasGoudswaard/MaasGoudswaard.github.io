@@ -25,7 +25,7 @@ function setup() {
   //I dont really understand why it is positioned in this way, it should be on the correct place but it is not
 
   fill(255);
-  rect(200, 200, 600, 600, 30);
+  rect(200, 200, 600, 400, 30);
 
   fill(0);
   textSize(40);
