@@ -49,7 +49,7 @@ let p6 = "";
  }
 
 function setup() {
-  createCanvas(windowWidth - 30, windowHeight - 60); //background
+  createCanvas(windowWidth, windowHeight ); //background
   background(200);
   
   //First draw the card box
