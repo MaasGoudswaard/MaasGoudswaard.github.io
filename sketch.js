@@ -138,7 +138,7 @@ function setup() {
   inputbox_type.option("Organization");
   
   //emoji checkbox setup
- image(emoji1, 400, 490, 10,10);
+ //image(emoji1, 400, 490, 10,10);
   
   noFill();
   
