@@ -137,22 +137,22 @@ function setup() {
   
   //emoji checkbox setup
  image(emoji1, 400, 470, 25, 25);
- image(emoji2, 430, 470, 25, 25);
- image(emoji3, 460, 470, 25, 25);
- image(emoji4, 490, 470, 25, 25);
- image(emoji5, 520, 470, 25, 25);
- image(emoji6, 400, 540, 20, 20);
- image(emoji7, 415, 540, 20, 10);
- image(emoji8, 430, 540, 20, 10);
- image(emoji9, 445, 540, 20, 10);
- image(emoji10, 460, 540, 20, 10);
- image(emoji11, 475, 540, 20, 10);
- image(emoji12, 490, 540, 20, 10);
- image(emoji13, 505, 540, 20, 10);
- image(emoji14, 520, 540, 20, 10);
- image(emoji15, 535, 540, 10, 10);
- image(emoji16, 550, 540, 10, 10);
- image(emoji17, 565, 540, 10, 10);
+ image(emoji2, 428, 470, 25, 25);
+ image(emoji3, 456, 470, 25, 25);
+ image(emoji4, 484, 470, 25, 25);
+ image(emoji5, 512, 470, 25, 25);
+ image(emoji6, 400, 540, 25, 25);
+ image(emoji7, 428, 540, 25, 25);
+ image(emoji8, 456, 540, 25, 25);
+ image(emoji9, 484, 540, 25, 25);
+ image(emoji10, 512, 540, 25, 25);
+ image(emoji11, 540, 540, 25, 25);
+ image(emoji12, 568, 540, 25, 25);
+ image(emoji13, 596, 540, 25, 25);
+ image(emoji14, 624, 540, 25, 25);
+ image(emoji15, 652, 540, 25, 25);
+ image(emoji16, 680, 540, 25, 25);
+ image(emoji17, 708, 540, 25, 25);
 
   radio_process = createRadio();
   radio_process.position(400, 510);
@@ -288,7 +288,7 @@ function buttonEvent() {
     },
   });
   //resetting all boxes to make sure the activity card is ready to log new activity
-  inputbox_team.value("");
+ // inputbox_team.value("");
   inputbox_date.value("");
   inputbox_description.value("");
   inputbox_hours.value("");
