@@ -96,42 +96,29 @@ function setup() {
   inputbox_type.option("Organization");
   
   //emoji checkbox setup
-<<<<<<< Updated upstream
-  emoji1b = createCheckbox("");
-  emoji1b.position(400, 510); 
-  emoji1 = loadImage("Frowning Face.png");
-  image(emoji1, 390, 480, 20, 20);
 
-  emoji1b = createCheckbox("");
-  emoji1b.position(435, 510); 
-  emoji1 = loadImage("Frowning Face.png");
-  image(emoji1, 425, 480, 20, 20);
-
-
-=======
-  radio_emotion = createRadio();
-  radio_emotion.position(400, 510);
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.style('width', '300px');
+  radio_process = createRadio();
+  radio_process.position(400, 510);
+  radio_process.option('');
+  radio_process.option('');
+  radio_process.option('');
+  radio_process.option('');
+  radio_process.option('');
+  radio_process.style('width', '300px');
   
-    radio_emotion = createRadio();
-  radio_emotion.position(400, 560);
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.option('');
-  radio_emotion.style('width', '300px');
->>>>>>> Stashed changes
+  radio_result = createRadio();
+  radio_result.position(400, 560);
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.option('');
+  radio_result.style('width', '300px');
 
   //Submit button for oocsi events
   button = createButton("submit");
@@ -140,21 +127,7 @@ function setup() {
 }
 
 function draw() {
-<<<<<<< Updated upstream
-  //The person selector// they will change dependent on the team selected
   inputbox_team.changed(mySelectEvent);
-
-  // //emoji outline selectors
-  // // hier komt code
-  // if (showrect1) {
-  //   noFill();
-  //   strokeWeight(1);
-  //   stroke(51);
-  //   rect(520, 480, 20, 20);
-  // }
-=======
->>>>>>> Stashed changes
-
 
   if (OOCSIsend == true) {
     alertfunction();
