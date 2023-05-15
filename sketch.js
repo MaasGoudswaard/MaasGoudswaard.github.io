@@ -182,7 +182,7 @@ function setup() {
 
   //Submit button for oocsi events
   button = createButton("submit");
-  button.position(520, 550);
+  button.position(500, 580);
   button.mouseClicked(buttonEvent);
 }
 
