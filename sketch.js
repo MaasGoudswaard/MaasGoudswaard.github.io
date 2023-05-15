@@ -136,11 +136,11 @@ function setup() {
   inputbox_type.option("Organization");
   
   //emoji checkbox setup
- image(emoji1, 400, 490, 20, 20);
- image(emoji2, 425, 490, 20, 20);
- image(emoji3, 450, 490, 20, 20);
- image(emoji4, 475, 490, 20, 20);
- image(emoji5, 500, 490, 20, 20);
+ image(emoji1, 400, 470, 25, 25);
+ image(emoji2, 430, 470, 25, 25);
+ image(emoji3, 460, 470, 25, 25);
+ image(emoji4, 490, 470, 25, 25);
+ image(emoji5, 520, 470, 25, 25);
  image(emoji6, 400, 540, 20, 20);
  image(emoji7, 415, 540, 20, 10);
  image(emoji8, 430, 540, 20, 10);
