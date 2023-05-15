@@ -28,23 +28,23 @@ let p4 = "";
 let p5 = "";
 let p6 = "";
 function preload(){
-  emoji1 = LoadImage('Frowning Face.png');
-  emoji2 = LoadImage('Confused Face.png');
-  emoji3 = LoadImage('Neutral Face.png');
-  emoji4 = LoadImage('Slightly Smiling Face.png');
-  emoji5 = LoadImage('Grinning Face With Big Eyes.png');
-  emoji6 = LoadImage('Pouting Face.png');
-  emoji7 = LoadImage('Face Vomiting.png');
-  emoji8 = LoadImage('Hot Face.png');
-  emoji9 = LoadImage('Loudly Crying Face.png');
-  emoji10 = LoadImage('Crying Face.png');
-  emoji11 = LoadImage('Face With Raised Eyebrow.png');
-  emoji12 = LoadImage('Face With Monocle.png');
-  emoji13 = LoadImage('Nerd Face.png');
-  emoji14 = LoadImage('Thinking Face.png');
-  emoji15 = LoadImage('Partying Face.png');
-  emoji16 = LoadImage('Grinning Face With Sweat.png');
-  emoji17 = LoadImage('Smiling Face With Heart Eyes.png');
+  emoji1 = loadImage('Frowning Face.png');
+  emoji2 = loadImage('Confused Face.png');
+  emoji3 = loadImage('Neutral Face.png');
+  emoji4 = loadImage('Slightly Smiling Face.png');
+  emoji5 = loadImage('Grinning Face With Big Eyes.png');
+  emoji6 = loadImage('Pouting Face.png');
+  emoji7 = loadImage('Face Vomiting.png');
+  emoji8 = loadImage('Hot Face.png');
+  emoji9 = loadImage('Loudly Crying Face.png');
+  emoji10 = loadImage('Crying Face.png');
+  emoji11 = loadImage('Face With Raised Eyebrow.png');
+  emoji12 = loadImage('Face With Monocle.png');
+  emoji13 = loadImage('Nerd Face.png');
+  emoji14 = loadImage('Thinking Face.png');
+  emoji15 = loadImage('Partying Face.png');
+  emoji16 = loadImage('Grinning Face With Sweat.png');
+  emoji17 = loadImage('Smiling Face With Heart Eyes.png');
 
 
 }
@@ -141,7 +141,6 @@ function setup() {
  //image(emoji1, 400, 490, 10,10);
   
   noFill();
-  
   radio_process = createRadio();
   radio_process.position(400, 510);
   radio_process.option('1');
