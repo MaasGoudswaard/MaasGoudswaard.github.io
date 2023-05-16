@@ -106,12 +106,12 @@ function setup() {
   inputbox_title.position(540, 253);
   //inputbox date
   inputbox_date = createInput();
-  inputbox_date.size(60, 10);
-  inputbox_date.position(580, 278);
+  inputbox_date.size(100, 10);
+  inputbox_date.position(540, 278);
   //inputbox hours spent
   inputbox_hours = createInput();
-  inputbox_hours.size(100, 10);
-  inputbox_hours.position(540, 303);
+  inputbox_hours.size(60, 10);
+  inputbox_hours.position(580, 303);
   //inputbox description
   inputbox_description = createInput();
   inputbox_description = select("#textinput");
