@@ -329,7 +329,7 @@ function buttonEvent() {
   person4.checked(false);
   person5.checked(false);
   person6.checked(false);
-  radio_process.value(false),
+  radio_result.value(false),
   inputbox_emoji6.checked(false),
    inputbox_emoji7.checked(false),
    inputbox_emoji8.checked(false),
