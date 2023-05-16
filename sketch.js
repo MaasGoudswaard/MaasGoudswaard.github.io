@@ -29,7 +29,7 @@ let p5 = "";
 let p6 = "";
 
  function preload(){
-   emoji1 = loadImage('Frowning Face.png');
+  emoji1 = loadImage('Frowning Face.png');
   emoji2 = loadImage('Confused Face.png');
   emoji3 = loadImage('Neutral Face.png');
   emoji4 = loadImage('Slightly Smiling Face.png');
@@ -85,7 +85,7 @@ function setup() {
   inputbox_team.option("Team 7");
   inputbox_team.option("Team 8");
   inputbox_team.option("Team 9");
-  inputbox_team.option("Team 10");
+  inputbox_team.option("Test");
   
   text("Who was involved:", 250, 300);
   //The person selector// they will change dependent on the team selected
@@ -191,7 +191,7 @@ function setup() {
 
 
   //Submit button for oocsi events
-  button = createButton("submit");
+  button = createButton("Submit");
   button.position(500, 600);
   button.mouseClicked(buttonEvent);
 }
@@ -243,6 +243,14 @@ function mySelectEvent() {
     p2 = "";
     p3 = "";
     p4 = "";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  if (inputbox_team.value() == "Test") {
+    p1 = "x";
+    p2 = "y";
+    p3 = "z";
+    p4 = "f";
     p5 = "Coach";
     p6 = "External";
   }
