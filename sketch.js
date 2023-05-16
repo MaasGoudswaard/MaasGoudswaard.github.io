@@ -76,16 +76,16 @@ function setup() {
   inputbox_team.size(100, 20);
   inputbox_team.position(250, 275);
   inputbox_team.option("");
-  inputbox_team.option("M1.2 Arian");
-  inputbox_team.option("Bright Break");
-  inputbox_team.option("VisualAIze");
-  inputbox_team.option("B2.2 Sustain");
-  inputbox_team.option("Team 5");
-  inputbox_team.option("Team 6");
-  inputbox_team.option("Team 7");
-  inputbox_team.option("Team 8");
-  inputbox_team.option("Team 9");
-  inputbox_team.option("Test");
+  inputbox_team.option("M1.2 Arian");         //1
+  inputbox_team.option("Bright Break");       //2
+  inputbox_team.option("VisualAIze");         //3
+  inputbox_team.option("B2.2 Sustain");       //4
+  inputbox_team.option("Dynamic Textile");    //5
+  inputbox_team.option("Team 6");             //6
+  inputbox_team.option("Team 7");             //7
+  inputbox_team.option("Team 8");             //8
+  inputbox_team.option("Team 9");             //9
+  inputbox_team.option("Test");               //10
   
   text("Who was involved:", 250, 300);
   //The person selector// they will change dependent on the team selected
@@ -206,7 +206,7 @@ function draw() {
 }
 //
 function mySelectEvent() {
-  if (inputbox_team.value() == "M1.2 Arian") {
+  if (inputbox_team.value() == "M1.2 Arian") {      //1
     p1 = "Arian";
     p2 = "";
     p3 = "";
@@ -214,7 +214,7 @@ function mySelectEvent() {
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Bright Break") {
+  if (inputbox_team.value() == "Bright Break") {    //2
     p1 = "Euwe";
     p2 = "Sanne";
     p3 = "Freek";
@@ -222,7 +222,7 @@ function mySelectEvent() {
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "VisualAIze") {
+  if (inputbox_team.value() == "VisualAIze") {    //3
     p1 = "Nikki";
     p2 = "Leqi";
     p3 = "Jelmer";
@@ -230,7 +230,7 @@ function mySelectEvent() {
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "B2.2 Sustain") {
+  if (inputbox_team.value() == "B2.2 Sustain") {    //4
     p1 = "x";
     p2 = "y";
     p3 = "z";
@@ -238,15 +238,15 @@ function mySelectEvent() {
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Team 5") {
-    p1 = "Single";
-    p2 = "";
-    p3 = "";
-    p4 = "";
+  if (inputbox_team.value() == "Dynamic Textile") {   //5
+    p1 = "Sophia";
+    p2 = "Janneke";
+    p3 = "Teo";
+    p4 = "Tijn";
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Test") {
+  if (inputbox_team.value() == "Test") {    //6
     p1 = "x";
     p2 = "y";
     p3 = "z";
