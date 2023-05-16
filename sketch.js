@@ -154,14 +154,14 @@ function setup() {
  image(emoji16, 690, 520, 25, 25);
  image(emoji17, 719, 520, 25, 25);
 
-  radio_process = createRadio();
-  radio_process.position(400, 510);
-  radio_process.option('1');
-  radio_process.option('2');
-  radio_process.option('3');
-  radio_process.option('4');
-  radio_process.option('5');
-  radio_process.style('width', '300px');
+  radio_result = createRadio();
+  radio_result.position(400, 510);
+  radio_result.option('1');
+  radio_result.option('2');
+  radio_result.option('3');
+  radio_result.option('4');
+  radio_result.option('5');
+  radio_result.style('width', '300px');
   
   inputbox_emoji6 = createCheckbox();
   inputbox_emoji6.position(400, 560);
@@ -295,7 +295,7 @@ function buttonEvent() {
       Person4: person4.checked(),
       Person5: person5.checked(),
       Person6: person6.checked(),
-      Emotion_Process: radio_process.value(),
+      Emotion_result: radio_result.value(),
       emoji6: inputbox_emoji6.checked(),
       emoji7: inputbox_emoji7.checked(),
       emoji8: inputbox_emoji8.checked(),
