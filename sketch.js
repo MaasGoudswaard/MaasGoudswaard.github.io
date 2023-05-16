@@ -97,8 +97,8 @@ function setup() {
   text("Description:", 425, 325);
 
   text("Type of activity:", 425, 450);
-  text("Emotion of Process:", 250, 500);
-  text("Emotion of Results:", 250, 550);
+  text("Emotion of Results:", 250, 500);
+  text("Emotion of Process:", 250, 550);
   
   //inputbox activity title
   inputbox_title = createInput();
