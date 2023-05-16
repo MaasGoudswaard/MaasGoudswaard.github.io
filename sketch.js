@@ -265,9 +265,9 @@ function buttonEvent() {
 
   $.ajax({
     //to send data to the database
-    url: "https://data.id.tue.nl/datasets/entity/8245/item/",
+    url: "https://data.id.tue.nl/datasets/entity/8267/item/",
     headers: {
-      api_token: "ZmR2RmpjajNBMzI0emNBbmxEVVJlT2V6R1A2NEd1endjdFkvWTc0WFJzQT0=",
+      api_token: "cW51Rk8zUnU5N2ZJUkFXTWFqM2c0RGliWW5XNUd2V0NHNjYrbk0yUGZxST0=",
       resource_id: "Activity",
       token: "token_for_identifier",
     },
