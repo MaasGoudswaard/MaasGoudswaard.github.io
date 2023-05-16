@@ -92,8 +92,8 @@ function setup() {
  
   //Create labels for following checkboxes
   text("Activity title:", 425, 250);
-  text("Date: DD/MM", 425, 275);
-  text("Hours spent:", 425, 300);
+  text("Date: (DD/MM)", 425, 275);
+  text("Hours spent: (e.g.: 1.5)", 425, 300);
   text("Description:", 425, 325);
 
   text("Type of activity:", 425, 450);
