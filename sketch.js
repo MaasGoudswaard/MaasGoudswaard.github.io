@@ -76,10 +76,10 @@ function setup() {
   inputbox_team.size(100, 20);
   inputbox_team.position(250, 275);
   inputbox_team.option("");
-  inputbox_team.option("Team 1");
-  inputbox_team.option("Team 2");
-  inputbox_team.option("Team 3");
-  inputbox_team.option("Team 4");
+  inputbox_team.option("M1.2 Arian");
+  inputbox_team.option("Bright Break");
+  inputbox_team.option("VisualAIze");
+  inputbox_team.option("B2.2 Sustain");
   inputbox_team.option("Team 5");
   inputbox_team.option("Team 6");
   inputbox_team.option("Team 7");
@@ -92,7 +92,7 @@ function setup() {
  
   //Create labels for following checkboxes
   text("Activity title:", 425, 250);
-  text("Date of action:", 425, 275);
+  text("Date: DD/MM", 425, 275);
   text("Hours spent:", 425, 300);
   text("Description:", 425, 325);
 
@@ -206,31 +206,31 @@ function draw() {
 }
 //
 function mySelectEvent() {
-  if (inputbox_team.value() == "Team 1") {
-    p1 = "Kees";
-    p2 = "Lisa";
-    p3 = "Charlotte";
-    p4 = "Jaap";
+  if (inputbox_team.value() == "M1.2 Arian") {
+    p1 = "Arian";
+    p2 = "";
+    p3 = "";
+    p4 = "";
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Team 2") {
-    p1 = "Maas";
-    p2 = "Jelmer";
-    p3 = "Leqi";
-    p4 = "Nikki";
+  if (inputbox_team.value() == "Bright Break") {
+    p1 = "Euwe";
+    p2 = "Sanne";
+    p3 = "Freek";
+    p4 = "";
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Team 3") {
-    p1 = "Joep";
-    p2 = "Bart";
-    p3 = "Miguel";
-    p4 = "Stephan";
+  if (inputbox_team.value() == "VisualAIze") {
+    p1 = "Nikki";
+    p2 = "Leqi";
+    p3 = "Jelmer";
+    p4 = "Maas";
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Team 4") {
+  if (inputbox_team.value() == "B2.2 Sustain") {
     p1 = "x";
     p2 = "y";
     p3 = "z";
@@ -339,5 +339,5 @@ function buttonEvent() {
 
 //Nice little prompt to show that it worked
 function alertfunction() {
-  alert("Activity Card logged!");
+  alert("The data is sent to the database!");
 }
