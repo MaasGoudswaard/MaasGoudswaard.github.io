@@ -82,7 +82,7 @@ function setup() {
   inputbox_team.option("Bioplastics");       //4
   inputbox_team.option("Dynamic Textile");    //5
   inputbox_team.option("FBP Kjell");             //6
-  inputbox_team.option("Team 7");             //7
+  inputbox_team.option("Chatbot");             //7
   inputbox_team.option("Team 8");             //8
   inputbox_team.option("Team 9");             //9
   inputbox_team.option("Test");               //10
@@ -254,7 +254,15 @@ function mySelectEvent() {
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Test") {    //7
+  if (inputbox_team.value() == "Chatbot") {    //7
+    p1 = "Tess";
+    p2 = "Antonia";
+    p3 = "Jonathan";
+    p4 = "luke Goh";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  if (inputbox_team.value() == "Test") {    //8
     p1 = "x";
     p2 = "y";
     p3 = "z";
