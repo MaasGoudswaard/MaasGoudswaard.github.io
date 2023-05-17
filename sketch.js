@@ -81,7 +81,7 @@ function setup() {
   inputbox_team.option("VisualAIze");         //3
   inputbox_team.option("Bioplastics");       //4
   inputbox_team.option("Dynamic Textile");    //5
-  inputbox_team.option("Team 6");             //6
+  inputbox_team.option("FBP Kjell");             //6
   inputbox_team.option("Team 7");             //7
   inputbox_team.option("Team 8");             //8
   inputbox_team.option("Team 9");             //9
@@ -246,7 +246,15 @@ function mySelectEvent() {
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Test") {    //6
+  if (inputbox_team.value() == "FBP Kjell") {    //6
+    p1 = "Kjell";
+    p2 = "";
+    p3 = "";
+    p4 = "";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  if (inputbox_team.value() == "Test") {    //7
     p1 = "x";
     p2 = "y";
     p3 = "z";
