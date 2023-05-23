@@ -83,7 +83,7 @@ function setup() {
   inputbox_team.option("Dynamic Textile");    //5
   inputbox_team.option("FBP Kjell");             //6
   inputbox_team.option("Chatbot");             //7
-  inputbox_team.option("Team 8");             //8
+  inputbox_team.option("P3");             //8
   inputbox_team.option("Team 9");             //9
   inputbox_team.option("Test");               //10
   
@@ -262,7 +262,15 @@ function mySelectEvent() {
     p5 = "Coach";
     p6 = "External";
   }
-  if (inputbox_team.value() == "Test") {    //8
+  if (inputbox_team.value() == "P3") {    //8
+    p1 = "Renee";
+    p2 = "Siddharth";
+    p3 = "Vera";
+    p4 = "";
+    p5 = "Coach";
+    p6 = "External";
+  }
+  if (inputbox_team.value() == "Test") {    //9
     p1 = "x";
     p2 = "y";
     p3 = "z";
